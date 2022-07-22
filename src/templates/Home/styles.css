@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  min-height: 100vh;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.posts{
+  display: grid;
+  grid-template-columns:  repeat(auto-fill, minmax(280px,1fr));
+  gap: 40px;
+}
+
+.post{
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.post img{
+  max-width: 100%;
+}
+
+.post-content{
+  padding: 35px;
+}
