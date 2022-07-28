@@ -7,6 +7,7 @@
     border-color: #345665;
     padding: 1%;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .button:disabled{
