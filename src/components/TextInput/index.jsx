@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 
-export default function TextInput({searchValue, handleChange}) {
+export const TextInput = ({searchValue, handleChange})=> {
   return (
       <input
       placeholder='Search something'
