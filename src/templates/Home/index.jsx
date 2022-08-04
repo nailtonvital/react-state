@@ -3,7 +3,7 @@ import './styles.css';
 import { Posts } from '../../components/Posts';
 import { loadPosts } from '../../utilis/loadPosts';
 import Button from '../../components/Button';
-import TextInput from '../../components/TextInput';
+import { TextInput } from '../../components/TextInput';
 
 export const Home = () =>{
     const [posts, setPosts] = useState([])
@@ -19,14 +19,14 @@ export const Home = () =>{
         return post.title.toLowerCase().includes(searchValue.toLowerCase())
     }) : posts
 
-    
+
     const handleLoadPosts = useCallback( async (page, postsPerPage) => {
       const postsAndPhotos = await loadPosts()
 
     setPosts(postsAndPhotos.slice(page, postsPerPage))
     setAllPosts(postsAndPhotos)
     }, [])
-  
+
     useEffect(()=>{
       handleLoadPosts(0, postsPerPage)
     }, [handleLoadPosts, postsPerPage])
@@ -96,7 +96,7 @@ export const Home = () =>{
 //     const { page, postsPerPage } = this.state
 //     const postsAndPhotos = await loadPosts()
 
-//     this.setState({ 
+//     this.setState({
 //       posts: postsAndPhotos.slice(page, postsPerPage),
 //       allPosts: postsAndPhotos,
 //      });
@@ -127,7 +127,7 @@ export const Home = () =>{
 //     const { posts, page, postsPerPage, allPosts, searchValue } = this.state;
 //     const noMorePost = page + postsPerPage >= allPosts.length
 
-    
+
 
 //   }
 // }
